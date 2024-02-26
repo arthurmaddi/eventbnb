@@ -1,0 +1,12 @@
+<h1>Liste des Spots de tournage </h1>
+
+<% @spots.each do |spot|%>
+  <div>
+    <h2><%= spot.name %></h2>
+    <p><%= spot.location %></p>
+    <p><%= spot.price%></p>
+    <%= link_to "Voir le spot", spot_path(spot) %>
+  </div>
+<% end %>
+
+<%= link_to "Ajouter un spot", new_spot_path %>
