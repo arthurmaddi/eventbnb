@@ -1,0 +1,16 @@
+<h1>Bienvenue</h1>
+
+
+<h2>Vos réservations de spots :</h2>
+
+
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= booking.spot.name %> -
+      <%= booking.start_date.strftime("%B %d, %Y") %> au
+      <%= booking.end_date.strftime("%B %d, %Y") %>
+    </li>
+  <% end %>
+</ul>
