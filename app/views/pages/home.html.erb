@@ -1,2 +1,62 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "Event_Bnb.png" %>
+    <% end %>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+        <p><i class="fa-solid fa-bars"></i></p>
+          <li class="nav-item dropdown">
+            <%= image_tag "shadow.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<%# navbar created for HTML %>
+
+<body>
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://th.bing.com/th/id/OIG3.HQAMzj2JuHEgMDTheewx?w=1024&h=1024&rs=1&pid=ImgDetMain)">
+
+    </div>
+
+  </div>
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-image">
+   <%= image_tag "Event_Bnb.png" %>
+  </div>
+
+  <div class="footer-copyright">
+  <p>This is <i class="fa-solid fa-video"></i><i class="fa-solid fa-film"></i> EventBnb</p>
+
+  </div>
+</div>
+
+</body>
