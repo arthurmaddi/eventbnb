@@ -6,6 +6,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def index
+    @bookings = Booking.all
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.spot = @spot
