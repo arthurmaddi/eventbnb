@@ -5,6 +5,7 @@
   <% @spots.each do |spot| %>
   <%= link_to spot_path(spot), class: 'card' do %>
     <div class="card-body">
+     <img src= <%= spot.images %> alt="Picture">
       <h5 class="card-title"><%= spot.name %></h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
       <p class="card-text"><%= spot.price %> €</p>
