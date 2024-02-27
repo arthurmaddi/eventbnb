@@ -1,10 +1,8 @@
-<h1>My Profile</h1>
+
+<h1>Bienvenue, <%= @user.email %></h1>
 
 
 <h2>Vos réservations de spots :</h2>
-
-
-
 
 <ul>
   <% @bookings.each do |booking| %>
@@ -16,5 +14,18 @@
   <% end %>
 </ul>
 
+
+
+<h2>Mes spots :</h2>
+<ul>
+<% @spots.each do |spot| %>
+    <li>
+      <%= spot.name %> -
+      <%= spot.location %> au
+      <%= spot.price %>
+    </li>
+
+<% end %>
+</ul>
 <%= link_to 'Retour à la page d\'accueil', root_path, class: 'btn btn-primary' %>
 <p>Vous voulez voir d'autres spots ? Vous pouvez les consulter depuis la page <%= link_to 'Voir tous les spots', spots_path, class: 'btn btn-primary' %></p>
