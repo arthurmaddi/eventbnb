@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.spot = @spot
     @booking.user = current_user
     @booking.save
-    redirect_to spot_path(@spot)
+    redirect_to dashboard_path(@booking.user)
   end
 
   private

@@ -1,24 +1,15 @@
 
-
-
-
-
-
-
-
-
 <h1>Liste des Spots de tournage </h1>
 <div class="container">
 
-  <% @spots.each do |spot|%>
-  <div class="card_container">
-    <div class="card-index">
-    <h2><%= spot.name %></h2>
-    <p><%= spot.location %></p>
-    <p><%= spot.price%></p>
-    <%= link_to "Voir le spot", spot_path(spot) %>
+  <% @spots.each do |spot| %>
+  <%= link_to spot_path(spot), class: 'card' do %>
+    <div class="card-body">
+      <h5 class="card-title"><%= spot.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
+      <p class="card-text"><%= spot.price %> €</p>
     </div>
-  </div>
   <% end %>
+<% end %>
 </div>
   <%= link_to "Ajouter un spot", new_spot_path %>
