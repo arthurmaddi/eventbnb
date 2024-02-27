@@ -14,7 +14,7 @@ arthur = User.create!(email: 'arthur@mail.com', password: 'coucou')
 nicolas = User.create!(email: 'nicolas@mail.com', password: 'coucou')
 washington = User.create!(email: 'washington@mail.com', password: 'coucou')
 
-Spot.create!(name: 'Maison de campagne', location: 'Bourgogne', price: 100, user: arthur)
+Spot.create!(name: 'Maison de campagne', location: 'Bourgogne', price: 100, user: arthur,)
 Spot.create!(name: 'Villa cozy', location: 'Paris', price: 1000, user: arthur)
 Spot.create!(name: 'Maison de riche', location: 'Marseille', price: 200000, user: nicolas)
 Spot.create!(name: 'Appartement de luxe', location: 'Lyon', price: 10000, user: washington)
