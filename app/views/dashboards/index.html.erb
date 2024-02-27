@@ -1,7 +1,10 @@
-<h1> My Profile</h1>
+<h1>My Profile</h1>
 
 
 <h2>Vos réservations de spots :</h2>
+
+
+
 
 <ul>
   <% @bookings.each do |booking| %>
@@ -9,24 +12,6 @@
       <%= booking.spot.name %> -
       <%= booking.start_date.strftime("%B %d, %Y") %> au
       <%= booking.end_date.strftime("%B %d, %Y") %>
-    </li>
-  <% end %>
-</ul>
-
-<h2>Mes spots :</h2>
-
-<ul>
-  <% @spots.each do |spot| %>
-    <li>
-      <%= link_to spot_path(spot), class: 'card' do %>
-        <div class="card-header">
-          <h5 class="card-title"><%= spot.name %></h5>
-        </div>
-        <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
-          <p class="card-text"><%= spot.price %> €</p>
-        </div>
-      <% end %>
     </li>
   <% end %>
 </ul>
