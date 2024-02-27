@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root, class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Event_Bnb.png" %>
     <% end %>
 
@@ -12,7 +12,6 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
 
-        <div>
           <li class="nav-item active">
             <%= link_to "Spots", spots_path, class: "nav-link" %>
           </li>
