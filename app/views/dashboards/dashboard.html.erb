@@ -15,6 +15,19 @@
 </ul>
 
 
+<h2>Les réservations reçues pour vos spots :</h2>
+<ul>
+  <% @bookings_received.each do |booking| %>
+    <li>
+      <%= booking.spot.name %> -
+      <%= booking.start_date.strftime("%B %d, %Y") %> au
+      <%= booking.end_date.strftime("%B %d, %Y") %>
+      <%= booking.status %>
+      <%=booking.user.email%>
+
+
+    </li>
+  <% end %>
 
 <h2>Mes spots :</h2>
 <ul>
@@ -29,3 +42,4 @@
 </ul>
 <%= link_to 'Retour à la page d\'accueil', root_path, class: 'btn btn-primary' %>
 <p>Vous voulez voir d'autres spots ? Vous pouvez les consulter depuis la page <%= link_to 'Voir tous les spots', spots_path, class: 'btn btn-primary' %></p>
+<%= console %>
