@@ -1,19 +1,2 @@
 // Import page-specific CSS files here.
 @import "home";
-
-.card-body {
-  height: 300px;
-  width: 300px;
-  margin: 16px;
-  background-color: black;
-  color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-
-.card-body img{
-  image-rendering: auto;
-  height: 150px;
-  width: 150px;
-}
