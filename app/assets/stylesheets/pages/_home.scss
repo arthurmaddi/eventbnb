@@ -2,38 +2,46 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(0, 0, 0);
+  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 80px;
+// .navbar-lewagon .navbar-brand img {
+//   width: 80px;
+// }
+
+// // .collapse{
+// //   justify-content: space-between;
+// //   justify-content: center;
+// //   color: rgb(255, 0, 0);
+// //   border: 2px solid white;
+// //   cursor: pointer;
+// //   overflow: hidden;
+// //   width: 85px;
+// //   background-color: rgb(0, 0, 0);
+// //   border-radius: 10%;
+// //   padding: 2px;
+// //   margin-top: 3px;
+// // }
+
+// .fa-solid{
+//   margin-left: 10px;
+//   margin-top: 18px;
+//   margin-right: 10px;
+// }
+
+// .avatar{
+//   margin-top: 6px;
+//   margin-right: 3px;
+// }
+
+.container-fluid {
+background-color: black;
 }
 
-.collapse{
-  justify-content: space-between;
-  justify-content: center;
-  color: rgb(255, 0, 0);
-  border: 2px solid white;
-  cursor: pointer;
-  overflow: hidden;
-  width: 85px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 10%;
-  padding: 2px;
-  margin-top: 3px;
-}
-
-.fa-solid{
-  margin-left: 10px;
-  margin-top: 18px;
-  margin-right: 10px;
-}
-
-.avatar{
-  margin-top: 6px;
-  margin-right: 3px;
+.nav-item {
+  color: white
 }
