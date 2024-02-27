@@ -1,16 +1,15 @@
-
-<h1>Liste des Spots de tournage </h1>
-<div class="container">
-
+<div class="card-group">
   <% @spots.each do |spot| %>
-  <%= link_to spot_path(spot), class: 'card' do %>
-    <div class="card-body">
-     <img src= <%= spot.images %> alt="Picture">
-      <h5 class="card-title"><%= spot.name %></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
-      <p class="card-text"><%= spot.price %> €</p>
+    <div class="card">
+      <img class="card-img-top" src="<%= spot.images %>" alt="<%= spot.name %>">
+      <div class="card-body">
+        <h5 class="card-title"><%= spot.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
+        <p class="card-text"><%= spot.price %> €</p>
+        <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(spot.updated_at) %> ago</small></p>
+        <%= link_to "More details", spot_path(spot), class: 'btn btn-primary' %>
+      </div>
     </div>
   <% end %>
-<% end %>
 </div>
-  <%= link_to "Ajouter un spot", new_spot_path %>
+<%= link_to "Ajouter un spot", new_spot_path %>
