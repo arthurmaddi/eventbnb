@@ -6,4 +6,12 @@
     <p><%= @spot.price%></p>
   </div>
 
+
+<%= simple_form_for([@spot, @booking]) do |f| %>
+<%  %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
+
 <%= link_to "Retour à la liste des spots", spots_path %>
