@@ -1,10 +1,14 @@
 class DashboardsController < ApplicationController
   before_action :authenticate_user!
 
-  def dashboard
+  def index
+    @user = current_user
+    @bookings = Booking.all
+  end
+
+  def show
     @user = current_user
     @spots = Spot.where(user: @user)
-    @bookings = current_user.bookings
   end
 
   def destroy
