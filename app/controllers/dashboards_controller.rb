@@ -4,6 +4,7 @@ class DashboardsController < ApplicationController
   def dashboard
     @user = current_user
     @bookings = Booking.where(user: @user)
+    @bookings_received = Booking.joins(:spot).where(spots: { user: @user })
     @spots = Spot.where(user: @user)
   end
 
@@ -13,5 +14,7 @@ class DashboardsController < ApplicationController
     @spot.destroy
     redirect_to dashboard_path
   end
+
+
 
 end

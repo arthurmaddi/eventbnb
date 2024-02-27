@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.spot = @spot
+    @booking.status = "pending"
     @booking.user = current_user
     @booking.save
     redirect_to dashboard_path(@booking.user)
