@@ -1,51 +1,33 @@
-.formulary-container{
-margin-top: 50px;
-margin-right: 500px;
-margin-left: 500px;
-padding: 20px;
-justify-content: center;
-border: 1px solid #000000;
-border-radius: 5px;
-box-shadow: #000000;
-}
+/* This is going to be the style page for the Log-in form */
 
-
-
-
-.form {
-  display: flex;
-  width: 200px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.form-group label {
-  width: 350px;
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input {
-  width: 350px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-button {
-  width: 150px;
-  padding: 10px;
+/* This is the main container of the form */
+.formulary-container {
   margin-top: 32px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 32px;
+  margin-right: 0px;
+  padding: 32px;
+  height: 500px;
+  width: 600px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  &:hover {
-    background-color: #0056b3;
-  }
+.form-button-new-spot{
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000;
+  border-radius: 15px;
+  height: 40px;
+  width: 128px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.form-button-new-spot:hover {
+  background-color: rgb(66, 112, 209);
+  color: rgb(255, 255, 255);
 }

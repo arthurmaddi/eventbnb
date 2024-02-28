@@ -1,12 +1,15 @@
 .card-group {
+  margin: 8px;
   display: flex;
   padding: 8px;
   margin: 16px;
+  border-radius: 15px;
 }
 
 .card{
   margin: 8px;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 15px;
   transition: 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
