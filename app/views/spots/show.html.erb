@@ -9,6 +9,7 @@
        <p><%= @spot.price%></p>
 
 
+
         <%= simple_form_for([@spot, @booking]) do |f| %>
           <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
           <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
