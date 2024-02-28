@@ -10,16 +10,16 @@
       </div>
 
 
-      <%= simple_form_for([@spot, @booking]) do |f| %>
-        <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
-        <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
-        <%= f.submit %>
-      <% end %>
-    </div>
+        <%= simple_form_for([@spot, @booking]) do |f| %>
+          <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
+          <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
+          <%= f.submit %>
+        <% end %>
+      </div>
 
-    <div class="map-card">
-    <%# here is where you're going to put the map %>
-    </div>
+      <div class="map-card">
+      <%# here is where you're going to put the map %>
+      </div>
 
 
 
