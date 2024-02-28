@@ -1,6 +1,12 @@
 class SpotsController < ApplicationController
   def index
     @spots = Spot.all
+    @markers = @spots.geocoded.map do |spot|
+      {
+        lat: spot.latitude,
+        lng: spot.longitude
+      }
+    end
   end
 
   def show
@@ -33,5 +39,4 @@ class SpotsController < ApplicationController
   def spot_params
     params.require(:spot).permit(:name, :location, :price, :image, :description)
   end
-
 end
