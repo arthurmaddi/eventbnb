@@ -1,48 +1,56 @@
+<div class="user-presentation">
+  <h1>Bienvenue, <%= @user.email %></h1>
+  <h2>Vos réservations de spots :</h2>
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li>
+        <%= booking.spot.name %> -
+        <%= booking.start_date.strftime("%B %d, %Y") %> au
+        <%= booking.end_date.strftime("%B %d, %Y") %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="user-presentation">
+  <h2>Les réservations reçues pour vos spots :</h2>
+  <ul>
+    <% @bookings_received.each do |booking| %>
+      <li>
+        <%= booking.spot.name %> -
+        <%= booking.start_date.strftime("%B %d, %Y") %> au
+        <%= booking.end_date.strftime("%B %d, %Y") %>
+        <%=booking.user.email%>
 
-<h1>Bienvenue, <%= @user.email %></h1>
+        <% if booking.status == "pending"%>
+          <button class="accept-button">
+          <%= link_to "accept", accept_path(booking), data: {turbo_method: "patch"} %>
+          </button>
+          <button class="reject-button">
+          <%= link_to "reject", reject_path(booking), data: {turbo_method: "patch"}  %>
+          </button>
+        <% else %>
+          <%= booking.status %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
+<div class="user-presentation">
+  <h2>Mes spots :</h2>
+  <ul>
+  <% @spots.each do |spot| %>
+      <li>
+        <%= spot.name %> -
+        <%= spot.location %> au
+        <%= spot.price %>
+      </li>
 
-<h2>Vos réservations de spots :</h2>
-
-<ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      <%= booking.spot.name %> -
-      <%= booking.start_date.strftime("%B %d, %Y") %> au
-      <%= booking.end_date.strftime("%B %d, %Y") %>
-    </li>
   <% end %>
-</ul>
+</div>
 
-
-<h2>Les réservations reçues pour vos spots :</h2>
-<ul>
-  <% @bookings_received.each do |booking| %>
-    <li>
-      <%= booking.spot.name %> -
-      <%= booking.start_date.strftime("%B %d, %Y") %> au
-      <%= booking.end_date.strftime("%B %d, %Y") %>
-      <%=booking.user.email%>
-
-      <% if booking.status == "pending"%>
-        <%= link_to "accept", accept_path(booking), data: {turbo_method: "patch"} %>
-        <%= link_to "reject", reject_path(booking), data: {turbo_method: "patch"}  %>
-      <% else %>
-        <%= booking.status %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
-<h2>Mes spots :</h2>
-<ul>
-<% @spots.each do |spot| %>
-    <li>
-      <%= spot.name %> -
-      <%= spot.location %> au
-      <%= spot.price %>
-    </li>
-
-<% end %>
-</ul>
-<%= link_to 'Retour à la page d\'accueil', root_path, class: 'btn btn-primary' %>
-<p>Vous voulez voir d'autres spots ? Vous pouvez les consulter depuis la page <%= link_to 'Voir tous les spots', spots_path, class: 'btn btn-primary' %></p>
+<div class="user-footer">
+  </ul>
+  <%= link_to 'Retour à la page d\'accueil', root_path, class: 'btn btn-primary' %>
+  <p>Vous voulez voir d'autres spots ? Vous pouvez les consulter depuis la page <%= link_to 'Voir tous les spots', spots_path, class: 'btn btn-primary' %></p>
+</div>
