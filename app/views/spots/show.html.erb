@@ -2,15 +2,15 @@
   <div class="show-container">
     <div class="show-card-photo-information">
      <div class="show-card">
-       <img class="show-image" src="<%= @spot.images %>" alt="Picture">
+       <%= cl_image_tag @spot.image.key, class:"show-image"%>
        <h2><%= @spot.name %></h2>
+       <p><%= @spot.description %></p>
        <p><%= @spot.location %></p>
        <p><%= @spot.price%></p>
-       </div>
+      </div>
 
 
       <%= simple_form_for([@spot, @booking]) do |f| %>
-      <%  %>
         <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
         <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
         <%= f.submit %>

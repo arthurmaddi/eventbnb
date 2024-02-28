@@ -1,23 +1,22 @@
 <div class="formulary-container">
   <h1>Nouveau spot</h1>
-  <%= form_for @spot do |f| %>
-    <div class="form-group-spot">
-      <%= f.label :name, "Nom du spot" %>
-      <%= f.text_field :name, class: "form-control" %>
+  <%= simple_form_for @spot do |f| %>
+    <div class="form-group">
+      <%= f.input :name, class: "form-control" %>
     </div>
 
-    <div class="form-group-spot">
-      <%= f.label :location, "Emplacement du spot" %>
-      <%= f.text_field :location, class: "form-control" %>
+    <div class="form-group">
+      <%= f.input :location, class: "form-control" %>
     </div>
 
-    <div class="form-group-spot">
-      <%= f.label :price, "Prix du spot" %>
-      <%= f.number_field :price, class: "form-control" %>
+    <div class="form-group">
+      <%= f.input :price, class: "form-control" %>
     </div>
 
-    <div class="form-button-new-spot">
-      <%= f.submit "Créer le spot", class: "btn" %>
+    <%= f.input :image, as: :file %>
+
+    <div class="form-button">
+      <%= f.submit "Créer le spot", class: "btn btn-primary" %>
     </div>
   <% end %>
 
