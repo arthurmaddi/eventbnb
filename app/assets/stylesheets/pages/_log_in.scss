@@ -1,7 +1,8 @@
 /* This is going to be the style page for the Log-in form */
 
+
 /* This is the main container of the form */
-.formulary-container {
+.form-login-container {
   margin-top: 32px;
   margin-bottom: 32px;
   margin-right: 0px;
@@ -15,19 +16,19 @@
   margin-right: auto;
 }
 
-.form-button-new-spot{
-  justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 32px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #000;
-  border-radius: 15px;
-  height: 40px;
-  width: 128px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+
+.form-actions-login{
+justify-content: center;
+margin-bottom: 32px;
+background-color: rgb(255, 255, 255);
+border: 1px solid #000;
+border-radius: 15px;
+height: 40px;
+width: 96px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
-.form-button-new-spot:hover {
+.form-actions-login:hover{
   background-color: rgb(66, 112, 209);
   color: rgb(255, 255, 255);
 }

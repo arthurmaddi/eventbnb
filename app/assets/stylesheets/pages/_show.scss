@@ -1,0 +1,45 @@
+/* This is where SCSS who's going to style the show of the spot by his ID */
+
+/* This is the class that's going to control the style of the entire div container */
+.show-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 32px;
+  height: 700px;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.show-card-photo-information{
+  height: 600px;
+  width: 400px;
+}
+
+.show-card img{
+  height: 300px;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+h2{
+  margin-top: 16px;
+}
+
+.map-card{
+  background-color: #000000;
+  height: 300px;
+  width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.form-control{
+  border: 1px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+/* God bless america */

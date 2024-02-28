@@ -1,21 +1,27 @@
 <h1>Ton spot de rêve </h1>
   <div class="show-container">
-    <div class="show-card">
-      <%= cl_image_tag @spot.image.key, class:"show-image"%>
+    <div class="show-card-photo-information">
+     <div class="show-card">
+       <%= cl_image_tag @spot.image.key, class:"show-image"%>
+       <h2><%= @spot.name %></h2>
+       <p><%= @spot.description %></p>
+       <p><%= @spot.location %></p>
+       <p><%= @spot.price%></p>
+      </div>
 
-      <h2><%= @spot.name %></h2>
-      <p><%= @spot.description %></p>
-      <p><%= @spot.location %></p>
-     <p><%= @spot.price%></p>
+
+      <%= simple_form_for([@spot, @booking]) do |f| %>
+        <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
+        <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
+        <%= f.submit %>
+      <% end %>
     </div>
+
+    <div class="map-card">
+    <%# here is where you're going to put the map %>
+    </div>
+
+
+
   </div>
-
-
-<%= simple_form_for([@spot, @booking]) do |f| %>
-<%  %>
-  <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
-  <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
-  <%= f.submit %>
-<% end %>
-
 <%= link_to "Retour à la liste des spots", spots_path %>
