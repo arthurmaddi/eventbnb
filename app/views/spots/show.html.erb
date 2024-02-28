@@ -7,7 +7,6 @@
        <p><%= @spot.description %></p>
        <p><%= @spot.location %></p>
        <p><%= @spot.price%></p>
-      </div>
 
 
         <%= simple_form_for([@spot, @booking]) do |f| %>
@@ -16,12 +15,7 @@
           <%= f.submit %>
         <% end %>
       </div>
+    </div>
 
-      <div class="map-card">
-      <%# here is where you're going to put the map %>
-      </div>
-
-
-
+  <%= link_to "Retour à la liste des spots", spots_path %>
   </div>
-<%= link_to "Retour à la liste des spots", spots_path %>
