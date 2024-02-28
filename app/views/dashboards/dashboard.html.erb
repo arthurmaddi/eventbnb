@@ -22,10 +22,14 @@
       <%= booking.spot.name %> -
       <%= booking.start_date.strftime("%B %d, %Y") %> au
       <%= booking.end_date.strftime("%B %d, %Y") %>
-      <%= booking.status %>
       <%=booking.user.email%>
 
-
+      <% if booking.status == "pending"%>
+        <%= link_to "accept", accept_path(booking), data: {turbo_method: "patch"} %>
+        <%= link_to "reject", reject_path(booking), data: {turbo_method: "patch"}  %>
+      <% else %>
+        <%= booking.status %>
+      <% end %>
     </li>
   <% end %>
 </ul>

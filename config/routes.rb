@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   resources :spots do
     resources :bookings, only: [:new, :create]
   end
+
+  patch "bookings/:id/accept", to: "bookings#accept", as: :accept
+  patch "bookings/:id/reject", to: "bookings#reject", as: :reject
+
 end
