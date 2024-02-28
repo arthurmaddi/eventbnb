@@ -1,8 +1,10 @@
 <h1>Ton spot de rêve </h1>
   <div class="show-container">
     <div class="show-card">
-      <img class="show-image" src="<%= @spot.images %>" alt="Picture">
+      <%= cl_image_tag @spot.image.key, class:"show-image"%>
+
       <h2><%= @spot.name %></h2>
+      <p><%= @spot.description %></p>
       <p><%= @spot.location %></p>
      <p><%= @spot.price%></p>
     </div>

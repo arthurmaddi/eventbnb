@@ -18,7 +18,7 @@ class SpotsController < ApplicationController
     if @spot.save
       redirect_to spot_path(@spot)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -31,7 +31,7 @@ class SpotsController < ApplicationController
   private
 
   def spot_params
-    params.require(:spot).permit(:name, :location, :price)
+    params.require(:spot).permit(:name, :location, :price, :image, :description)
   end
 
 end

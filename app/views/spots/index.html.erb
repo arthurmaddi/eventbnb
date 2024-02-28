@@ -1,9 +1,10 @@
 <div class="card-group">
   <% @spots.each do |spot| %>
     <div class="card">
-      <img class="card-img-top" src="<%= spot.images %>" alt="<%= spot.name %>">
+      <%= cl_image_tag spot.image.key, class:"card-img-top"%>
       <div class="card-body">
         <h5 class="card-title"><%= spot.name %></h5>
+        <h6 class="card-title"><%=spot.description %></h6>
         <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
         <p class="card-text"><%= spot.price %> €</p>
         <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(spot.updated_at) %> ago</small></p>
