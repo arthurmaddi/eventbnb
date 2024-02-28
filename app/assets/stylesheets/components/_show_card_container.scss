@@ -7,8 +7,7 @@
   margin: 16px;
   border-radius: 15px;
 }
-
-.card{
+.card {
   height: 520px;
   margin: 8px;
   padding: 8px;
@@ -16,8 +15,7 @@
   transition: 0.3s;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
-
-.button-ajouter-un-spot{
+.button-ajouter-un-spot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,13 +30,11 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.button-ajouter-un-spot:hover{
+.button-ajouter-un-spot:hover {
   background-color: rgb(66, 112, 209);
   color: rgb(255, 255, 255);
 }
-
-.card img{
+.card img {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   height: 250px;
