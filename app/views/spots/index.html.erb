@@ -10,12 +10,8 @@
           <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
           <p class="card-text"><%= spot.price %> €</p>
           </div>
-     <div class="button-details">
-        <button class="button">
-        <%= link_to "More details", spot_path(spot)%>
-
-         </button>
-
+      <div>
+        <%= link_to "More details", spot_path(spot), class: "button-ajouter"%>
       </div>
       </button>
     </div>
