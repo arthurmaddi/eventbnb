@@ -1,3 +1,26 @@
+<h4>Recherche</h4>
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-sm-11 my-1">
+    <%= form_with url: spots_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= link_to "reset", spots_path %>
+</div>
+
+
+
+
+
+
+
 <div class="card-group">
 
   <% @spots.each do |spot| %>
@@ -10,12 +33,8 @@
           <h6 class="card-subtitle mb-2 text-muted"><%= spot.location %></h6>
           <p class="card-text"><%= spot.price %> €</p>
           </div>
-     <div class="button-details">
-        <button class="button">
-        <%= link_to "More details", spot_path(spot)%>
-
-         </button>
-
+      <div>
+        <%= link_to "More details", spot_path(spot), class: "button-ajouter"%>
       </div>
       </button>
     </div>
@@ -23,15 +42,14 @@
 </div>
 
 <%# map %>
-  <div style="width: 100%; height: 500px; border-radius: 15px;"
+<div class="map-container" style="display: flex; justify-content: center; align-items: center;">
+  <div style="width: 100%; height: 500px; border-radius: 15px; margin: 32px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+</div>
 
-
-
-<%= link_to "Ajouter un spot", new_spot_path %>
-
-
-<button class="button-ajouter-un-spot"><%= link_to "Ajouter un spot", new_spot_path %></button>
+<div class="centered.button">
+  <%= link_to "Ajouter un spot", new_spot_path, class: "button-ajouter" %>
+</div>
