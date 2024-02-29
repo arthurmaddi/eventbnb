@@ -13,32 +13,21 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <%= javascript_importmap_tags %>
-
   </head>
 
-      <%= render "shared/navbar" %>
+  <%= render "shared/navbar" %>
   <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+    <div class="fix-footer">
+          <%= yield %>
 
-      <%= yield %>
-
-
-    <div class="footer">
-      <div class="footer-links">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div class="footer-image">
-      <%= image_tag "Event_Bnb.png" %>
-      </div>
-      <div class="footer-copyright">
-        <p>This is <i class="fa-solid fa-video"></i><i class="fa-solid fa-film"></i> EventBnb</p>
-      </div>
     </div>
+
+
   </body>
+  <%= render "shared/footer" %>
+
+
 </html>
