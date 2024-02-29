@@ -2,7 +2,12 @@
 .button-search{
 background-color: green;
 color: white;
-padding: 8px;
+padding-left: 25px;
+padding-right: 25px;
 border-radius: 15px;
 margin-right: 8px;
+}
+
+.btn-reset {
+  color: red;
 }
