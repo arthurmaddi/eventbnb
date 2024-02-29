@@ -8,7 +8,7 @@
       <p><%= @spot.location %></p>
       <p><%= @spot.price%></p>
       <% if current_user == @spot.user%>
-        <%= link_to "Modifier ce spot", edit_spot_path(@spot) %>
+        <%= link_to "Modifier ce spot", edit_spot_path(@spot), class: "button-ajouter" %>
       <% else %>
       <div data-controller="datepicker">
         <div id="booking-form-div" data-datepicker-target="dates"
@@ -17,7 +17,7 @@
           <%= simple_form_for([@spot, @booking]) do |f| %>
             <%= f.input :start_date, as: :string,label: false, input_html: { data: {datepicker_target: "start"}, class: "d-none" } %>
             <%= f.input :end_date, as: :string,label: false, input_html: { data: {datepicker_target: "end"}, class: "d-none" } %>
-            <%= f.submit %>
+            <%= f.submit class: "button"  %>
           <% end %>
         <% end %>
       </div>
@@ -32,5 +32,5 @@
             <% else %>
             <% end %>
 
-        <%= link_to "Retour à la liste des spots", spots_path %>
 </div>
+<%= link_to "Retour à la liste des spots", spots_path, class: "button"%>
