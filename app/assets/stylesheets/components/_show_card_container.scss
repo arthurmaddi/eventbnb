@@ -13,29 +13,11 @@
   padding: 8px;
   border-radius: 15px;
   transition: 0.3s;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
-.button-ajouter-un-spot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
-  margin-bottom: 32px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #000;
-  border-radius: 15px;
-  height: 40px;
-  width: 144px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
-  margin-left: auto;
-  margin-right: auto;
-}
-.button-ajouter-un-spot:hover {
-  background-color: rgb(66, 112, 209);
-  color: rgb(255, 255, 255);
-}
+
 .card img {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   height: 250px;
   width: 280px;

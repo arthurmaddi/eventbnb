@@ -1,7 +1,10 @@
 .navbar-lewagon {
-  background-color: #212529;
+  background-color: transparent;
   color: #fff;
-  // padding: 0 1rem;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   .navbar-brand {
     img {
       height: 3rem;
