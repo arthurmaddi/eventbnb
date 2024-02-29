@@ -18,17 +18,45 @@
 
 
 .form-actions-login{
-justify-content: center;
-margin-bottom: 32px;
-background-color: rgb(255, 255, 255);
-border: 1px solid #000;
-border-radius: 15px;
-height: 40px;
-width: 96px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 4px 12px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  margin: 8px
 }
 
-.form-actions-login:hover{
-  background-color: rgb(66, 112, 209);
-  color: rgb(255, 255, 255);
+.form-actions-login:active,
+.form-actions-login:focus {
+  outline: none;
+}
+
+.form-actions-login:hover {
+  background-position: -20px -20px;
+}
+
+.form-actions-login:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
