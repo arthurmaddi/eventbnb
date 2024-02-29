@@ -26,7 +26,7 @@ washington = User.create!(email: 'washington@mail.com', password: 'coucou')
 
 
 file = URI.open("https://images.unsplash.com/photo-1664261421791-c25c5760f577?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-spot = Spot.new(name: "New York Loft", description: "A spacious and modern loft in the heart of Manhattan", location: "Lille", price: 100, user: arthur)
+spot = Spot.new(name: "New York Loft", description: "A spacious and modern loft in the heart of Manhattan", location: "Lille", price:  100, user: arthur)
 spot.image.attach(io: file, filename: "nw.png", content_type: "image/png")
 spot.save
 

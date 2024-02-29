@@ -1,38 +1,37 @@
 /* This page is going to be the style css from /dashboard.html.erb */
 
-.user-presentation{
-margin: 32px;
-padding: 16px;
-border-radius: 15px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-}
-
-.user-footer{
-margin: 32px;
-padding: 16px;
-border-radius: 15px;
-}
-
-
-.accept-button{
-background-color: #ffffff;
-padding: 8px;
-border-radius: 15px;
-}
-
-.accept-button:hover{
-  background-color: #00b627;
-  padding: 8px;
+.user-presentation {
+  margin: 32px;
+  padding: 16px;
   border-radius: 15px;
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
 
-.reject-button{
+.user-footer {
+  margin: 32px;
+  padding: 16px;
+  border-radius: 15px;
+}
+
+.accept-button {
   background-color: #ffffff;
   padding: 8px;
   border-radius: 15px;
 }
 
-.reject-button:hover{
+.accept-button:hover {
+  background-color: #00b627;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+.reject-button {
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+.reject-button:hover {
   background-color: #eb0000;
   padding: 8px;
   border-radius: 15px;
