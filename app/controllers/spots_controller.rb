@@ -1,6 +1,10 @@
 class SpotsController < ApplicationController
   def index
     @spots = Spot.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR location ILIKE :query OR description ILIKE :query"
+      @spots = @spots.where(sql_subquery, query: "%#{params[:query]}%")
+    end
     @markers = @spots.geocoded.map do |spot|
       {
         lat: spot.latitude,
