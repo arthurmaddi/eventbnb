@@ -17,11 +17,14 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  padding: 8px 16px;
+
 }
 
 .button-home:hover{
   box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
   transition-duration: .1s;
+  padding: 12px, 24px;
 }
 
 .button{
@@ -68,7 +71,7 @@
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
 
-.button-log-in{
+.button-ajouter{
   align-items: center;
   appearance: none;
   background-color: #3EB2FD;
@@ -96,18 +99,18 @@
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
-  margin: 8px;
+  margin: 16px;
 }
 
-.button-log-in:active,
-.button-log-in:focus {
+.button-ajouter:active,
+.button-ajouter:focus {
   outline: none;
 }
 
-.button-log-in:hover {
+.button-ajouter:hover {
   background-position: -20px -20px;
 }
 
-.button-log-in:focus:not(:active) {
+.button-ajouter:focus:not(:active) {
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
