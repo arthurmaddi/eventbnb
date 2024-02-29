@@ -5,16 +5,15 @@
   display: flex;
   justify-content: space-between;
   margin: 32px;
-  height: 760px;
+  height: auto;
   border-radius: 15px;
-  border: 1px solid #000000;
   padding: 32px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .show-card-photo-information{
-  height: 600px;
   width: 400px;
+  padding: 8px;
 }
 
 .show-card img{
@@ -24,7 +23,7 @@
 }
 
 h2{
-  margin-top: 16px;
+  margin: 16px;
 }
 
 .form-control{

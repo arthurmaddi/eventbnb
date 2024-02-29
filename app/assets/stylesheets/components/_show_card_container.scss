@@ -3,10 +3,10 @@
 .card-group {
   margin: 8px;
   display: flex;
-  padding: 8px;
+  padding: 16px;
   margin: 16px;
-  border-radius: 15px;
 }
+
 .card {
   height: 520px;
   margin: 8px;
@@ -20,6 +20,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   height: 250px;
-  width: 280px;
   object-fit: cover;
+}
+
+.button-details{
+  margin: 8px;
 }
