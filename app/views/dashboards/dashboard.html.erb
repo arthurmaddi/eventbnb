@@ -1,53 +1,77 @@
 <div class="user-presentation">
-  <h1>Bienvenue, <%= @user.email %></h1>
   <h2>Vos réservations de spots :</h2>
-  <ul>
+  <div class="row">
     <% @bookings.each do |booking| %>
-      <li>
-        <%= booking.spot.name %> -
-        <%= booking.start_date.strftime("%B %d, %Y") %> au
-        <%= booking.end_date.strftime("%B %d, %Y") %>
-      </li>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <%= cl_image_tag booking.spot.image.key, class: "card-img-top", alt: booking.spot.name %>
+          <div class="card-body">
+            <h5 class="card-title"><%= booking.spot.name %></h5>
+            <p class="card-text">
+              <strong>Dates:</strong>
+              <%= booking.start_date.strftime("%B %d, %Y") %> au <%= booking.end_date.strftime("%B %d, %Y") %>
+            </p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
+
 <div class="user-presentation">
   <h2>Les réservations reçues pour vos spots :</h2>
-  <ul>
+  <div class="row">
     <% @bookings_received.each do |booking| %>
-      <li>
-        <%= booking.spot.name %> -
-        <%= booking.start_date.strftime("%B %d, %Y") %> au
-        <%= booking.end_date.strftime("%B %d, %Y") %>
-        <%=booking.user.email%>
-
-        <% if booking.status == "pending"%>
-          <button class="accept-button">
-          <%= link_to "accept", accept_path(booking), data: {turbo_method: "patch"} %>
-          </button>
-          <button class="reject-button">
-          <%= link_to "reject", reject_path(booking), data: {turbo_method: "patch"}  %>
-          </button>
-        <% else %>
-          <%= booking.status %>
-        <% end %>
-      </li>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <%= cl_image_tag booking.spot.image.key, class: "card-img-top", alt: booking.spot.name %>
+          <div class="card-body">
+            <h5 class="card-title"><%= booking.spot.name %></h5>
+            <p class="card-text">
+              <strong>Dates:</strong>
+              <%= booking.start_date.strftime("%B %d, %Y") %> au <%= booking.end_date.strftime("%B %d, %Y") %><br>
+              <strong>Email:</strong> <%= booking.user.email %><br>
+              <% if booking.status == "pending" %>
+                <button class="btn btn-success accept-button">
+                  <%= link_to "Accepter", accept_path(booking), data: { turbo_method: "patch" } %>
+                </button>
+                <button class="btn btn-danger reject-button">
+                  <%= link_to "Rejeter", reject_path(booking), data: { turbo_method: "patch" } %>
+                </button>
+              <% else %>
+                <span class="badge bg-secondary"><%= booking.status %></span>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
+
+
+
 
 <div class="user-presentation">
   <h2>Mes spots :</h2>
-  <ul>
-  <% @spots.each do |spot| %>
-      <li>
-        <%= spot.name %> -
-        <%= spot.location %> au
-        <%= spot.price %>
-      </li>
-
-  <% end %>
+  <div class="row">
+    <% @spots.each do |spot| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <%= cl_image_tag spot.image.key, class: "card-img-top", alt: spot.name %>
+          <div class="card-body">
+            <h5 class="card-title"><%= spot.name %></h5>
+            <p class="card-text">
+              <strong>Location:</strong> <%= spot.location %><br>
+              <strong>Prix:</strong> <%= spot.price %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
 
 <div class="user-footer">
   </ul>

@@ -1,7 +1,7 @@
 /* This is where SCSS who's going to style the show of the spot by his ID */
 
 /* This is the class that's going to control the style of the entire div container */
-.show-container{
+.show-container {
   display: flex;
   justify-content: space-between;
   margin: 32px;
@@ -11,27 +11,25 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
-.show-card-photo-information{
+.show-card-photo-information {
   width: 400px;
   padding: 8px;
 }
 
-.show-card img{
+.show-card img {
   height: 300px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
-h2{
+h2 {
   margin: 16px;
 }
 
-.form-control{
+.form-control {
   border: 1px solid #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
 }
-
-
 
 /* God bless america */
