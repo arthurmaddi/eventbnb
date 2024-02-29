@@ -14,6 +14,7 @@ class SpotsController < ApplicationController
     @booking = Booking.new
   end
 
+
   def new
     @spot = Spot.new
   end
@@ -30,9 +31,31 @@ class SpotsController < ApplicationController
 
   def destroy
     @spot = Spot.find(params[:id])
-    @spot.destroy
-    redirect_to spots_path
+    if @spot.user == current_user
+      @spot.destroy
+      redirect_to root_path, notice: 'Le spot a bien été supprimé.'
+    else
+      redirect_to root_path, alert: 'Vous ne pouvez pas supprimer ce spot.'
+    end
   end
+
+  def edit
+    @spot = Spot.find(params[:id])
+  end
+
+  def update
+    @spot = Spot.find(params[:id])
+
+
+    if @spot.user == current_user
+      @spot.edit(spot_params)
+      redirect_to spot_path(@spot)
+    else
+      redirect_to root_path, alert: 'Vous ne pouvez pas modifier ce spot.'
+    end
+  end
+
+
 
   private
 
