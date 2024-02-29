@@ -22,6 +22,9 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
+h1{
+  margin: 32px;
+}
 
 h2{
   margin: 16px;
@@ -29,9 +32,43 @@ h2{
 
 .form-control{
   border: 1px solid #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
   border-radius: 15px;
+  margin-right: 8px
 }
+
+/* God bless america */
+
+
+/* This is where SCSS who's going to style the show of the spot by his ID */
+
+/* This is the class that's going to control the style of the entire div container */
+.show-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 32px;
+  height: auto;
+  border-radius: 15px;
+  padding: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.show-card-photo-information{
+  width: 400px;
+  padding: 8px;
+}
+
+.show-card img{
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+h2{
+  margin: 16px;
+}
+
+
 
 .centered.button {
   margin: 0;
