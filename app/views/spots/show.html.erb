@@ -1,22 +1,31 @@
 <h1>Ton spot de rêve </h1>
-  <div class="show-container">
-    <div class="show-card-photo-information">
-     <div class="show-card">
-       <%= cl_image_tag @spot.image.key, class:"show-image"%>
-       <h2><%= @spot.name %></h2>
-       <p><%= @spot.description %></p>
-       <p><%= @spot.location %></p>
-       <p><%= @spot.price%></p>
+<div class="show-container">
+  <div class="show-card-photo-information">
+  <div class="show-card">
+    <%= cl_image_tag @spot.image.key, class:"show-image"%>
+    <h2><%= @spot.name %></h2>
+    <p><%= @spot.description %></p>
+    <p><%= @spot.location %></p>
+    <p><%= @spot.price%></p>
 
+    <% if current_user == @spot.user%>
+      <%= link_to "Modifier ce spot", edit_spot_path(@spot) %>
+    <% else %>
+      <%= simple_form_for([@spot, @booking]) do |f| %>
+        <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
+        <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
 
+    <% if current_user == @spot.user%>
+        <%=link_to "Supprimer ce spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?" } %>
+      <% else %>
+      <% end %>
 
-        <%= simple_form_for([@spot, @booking]) do |f| %>
-          <%= f.input :start_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
-          <%= f.input :end_date, as: :string, input_html: { data: {controller: "datepicker"} } %>
-          <%= f.submit %>
-        <% end %>
-      </div>
-    </div>
+  </div>
+  </div>
+
 
   <%= link_to "Retour à la liste des spots", spots_path %>
-  </div>
+</div>
