@@ -1,7 +1,3 @@
-/* This is going to be the style page for the Log-in form */
-
-
-/* This is the main container of the form */
 .form-login-container {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -16,9 +12,7 @@
   margin-right: auto;
 }
 
-
-.form-actions-login{
-
+.form-actions-login {
   align-items: center;
   appearance: none;
   background-color: #3EB2FD;
@@ -46,6 +40,9 @@
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
+
+  margin: 8px;
+=======
   margin: 8px
 }
 .form-actions-login:hocer{
