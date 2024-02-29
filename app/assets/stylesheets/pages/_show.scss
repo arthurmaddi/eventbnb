@@ -31,8 +31,9 @@ h2{
 
 .form-control{
   border: 1px solid #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
   border-radius: 15px;
+  margin-right: 8px
 }
 
 /* God bless america */
@@ -65,11 +66,7 @@ h2{
   margin: 16px;
 }
 
-.form-control{
-  border: 1px solid #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-}
+
 
 .centered.button {
   margin: 0;
