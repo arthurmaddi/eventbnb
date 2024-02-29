@@ -47,7 +47,7 @@
 }
 
 .banner {
-  height: 80vh;
+  min-height: calc(100vh - 108px);
   background-size: cover;
   background-position: center;
   padding: 150px 0;

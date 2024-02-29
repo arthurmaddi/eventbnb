@@ -4,7 +4,8 @@ class SpotsController < ApplicationController
     @markers = @spots.geocoded.map do |spot|
       {
         lat: spot.latitude,
-        lng: spot.longitude
+        lng: spot.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {spot: spot})
       }
     end
   end
@@ -12,6 +13,13 @@ class SpotsController < ApplicationController
   def show
     @spot = Spot.find(params[:id])
     @booking = Booking.new
+    @bookings       = @spot.bookings
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+    end
   end
 
 
@@ -29,31 +37,31 @@ class SpotsController < ApplicationController
     end
   end
 
-  def destroy
-    @spot = Spot.find(params[:id])
-    if @spot.user == current_user
-      @spot.destroy
-      redirect_to root_path, notice: 'Le spot a bien été supprimé.'
-    else
-      redirect_to root_path, alert: 'Vous ne pouvez pas supprimer ce spot.'
+    def destroy
+      @spot = Spot.find(params[:id])
+      if @spot.user == current_user
+        @spot.destroy
+        redirect_to root_path, notice: 'Le spot a bien été supprimé.'
+      else
+        redirect_to root_path, alert: 'Vous ne pouvez pas supprimer ce spot.'
+      end
     end
-  end
 
-  def edit
-    @spot = Spot.find(params[:id])
-  end
-
-  def update
-    @spot = Spot.find(params[:id])
-
-
-    if @spot.user == current_user
-      @spot.edit(spot_params)
-      redirect_to spot_path(@spot)
-    else
-      redirect_to root_path, alert: 'Vous ne pouvez pas modifier ce spot.'
+    def edit
+      @spot = Spot.find(params[:id])
     end
-  end
+
+    def update
+      @spot = Spot.find(params[:id])
+
+
+      if @spot.user == current_user
+        @spot.edit(spot_params)
+        redirect_to spot_path(@spot)
+      else
+        redirect_to root_path, alert: 'Vous ne pouvez pas modifier ce spot.'
+      end
+    end
 
 
 
@@ -62,4 +70,5 @@ class SpotsController < ApplicationController
   def spot_params
     params.require(:spot).permit(:name, :location, :price, :image, :description)
   end
+
 end
