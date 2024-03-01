@@ -1,6 +1,6 @@
-<%= link_to 'Retour à la page d\'accueil', root_path, class: 'button' %>
+<%= link_to 'Return to the home page', root_path, class: 'button' %>
 <div class="user-presentation">
-  <h2>Vos réservations de spots :</h2>
+  <h2>Your spot reservations :</h2>
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="col-md-4 mb-4">
@@ -20,7 +20,7 @@
 </div>
 
 <div class="user-presentation">
-  <h2>Les réservations reçues pour vos spots :</h2>
+  <h2>Reservations received for your spots :</h2>
   <div class="row">
     <% @bookings_received.each do |booking| %>
       <div class="col-md-4 mb-4">
@@ -34,10 +34,10 @@
               <strong>Email:</strong> <%= booking.user.email %><br>
               <% if booking.status == "pending" %>
                 <button class="btn btn-success accept-button">
-                  <%= link_to "Accepter", accept_path(booking), data: { turbo_method: "patch" } %>
+                  <%= link_to "Accept", accept_path(booking), data: { turbo_method: "patch" } %>
                 </button>
                 <button class="btn btn-danger reject-button">
-                  <%= link_to "Rejeter", reject_path(booking), data: { turbo_method: "patch" } %>
+                  <%= link_to "Reject", reject_path(booking), data: { turbo_method: "patch" } %>
                 </button>
               <% else %>
                 <span class="badge bg-secondary"><%= booking.status %></span>
@@ -54,7 +54,7 @@
 
 
 <div class="user-presentation">
-  <h2>Mes spots :</h2>
+  <h2>My spots :</h2>
   <div class="row">
     <% @spots.each do |spot| %>
       <div class="col-md-4 mb-4">
@@ -64,7 +64,7 @@
             <h5 class="card-title"><%= spot.name %></h5>
             <p class="card-text">
               <strong>Location:</strong> <%= spot.location %><br>
-              <strong>Prix:</strong> <%= spot.price %>
+              <strong>Price:</strong> <%= spot.price %>
             </p>
           </div>
         </div>
