@@ -1,5 +1,11 @@
 <h1>My dashboard </h1>
-
+  <div class="user-footer text-center mt-4" id="buttons">
+    <p>
+      <button class="button-74" onclick="showReservations()">View your reservations</button>
+      <button class="button-74" onclick="showReceived()">View received reservations</button>
+      <button class="button-74" onclick="showSpots()">View your spots</button>
+    </p>
+  </div>
 
 <div class="user-presentation" id="reservations" style="display: none;">
   <!-- Contenu des réservations de spots -->
@@ -76,15 +82,6 @@
   </div>
 </div>
 
-<div class="user-footer text-center mt-4" id="buttons">
-    <p>
-      <button class="button-74" onclick="showReservations()">View your reservations</button>
-      <button class="button-74" onclick="showReceived()">View received reservations</button>
-      <button class="button-74" onclick="showSpots()">View your spots</button>
-    </p>
-    <a href="<%= root_path %>" class="btn btn-secondary btn-lg">Come Back</a>
-  </div>
-</div>
 
 <script>
   function showReservations() {
