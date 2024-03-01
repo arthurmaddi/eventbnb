@@ -1,5 +1,5 @@
 <div class="formulary-container">
-  <h1>Nouveau spot</h1>
+  <h1>New spot</h1>
   <%= simple_form_for @spot do |f| %>
     <div class="form-group">
       <%= f.input :name, class: "form-control" %>
@@ -20,9 +20,9 @@
     <%= f.input :image, as: :file %>
 
     <div class="form-button">
-      <%= f.submit "Créer le spot", class: "btn btn-primary" %>
+      <%= f.submit "Create the spot", class: "btn btn-primary" %>
     </div>
   <% end %>
 
 </div>
-<%= link_to "Retour à la liste des spots", spots_path, class: "button-ajouter" %>
+<%= link_to "Return to the list", spots_path, class: "button-ajouter" %>

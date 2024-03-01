@@ -1,4 +1,4 @@
-<h1>Ton spot de rêve </h1>
+<h1>Your dream's spot </h1>
 <div class="show-container">
   <div class="show-card-photo-information">
     <div class="show-card">
@@ -9,7 +9,7 @@
       <p><%= @spot.price%></p>
 
       <% if current_user == @spot.user%>
-        <%= link_to "Modifier ce spot", edit_spot_path(@spot), class: "button-ajouter" %>
+        <%= link_to "Modify the spot", edit_spot_path(@spot), class: "button-ajouter" %>
       <% else %>
       <div data-controller="datepicker">
         <div id="booking-form-div" data-datepicker-target="dates"
@@ -23,15 +23,15 @@
         <% end %>
       </div>
       <% if current_user == @spot.user%>
-          <%=link_to "Supprimer ce spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?" } %>
+          <%=link_to "Delete the spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?" } %>
         <% else %>
         <% end %>
     </div>
   </div>
           <% if current_user == @spot.user%>
-              <%=link_to "Supprimer ce spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?" } %>
+              <%=link_to "Delete the spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?" } %>
             <% else %>
             <% end %>
 
 </div>
-<%= link_to "Retour à la liste des spots", spots_path, class: "button"%>
+<%= link_to "Return to the list", spots_path, class: "button"%>
