@@ -1,6 +1,8 @@
-<%= link_to 'Retour à la page d\'accueil', root_path, class: 'button' %>
-<div class="user-presentation">
-  <h2>Vos réservations de spots :</h2>
+<h1>My dashboard </h1>
+
+<div class="user-presentation" id="reservations" style="display: none;">
+  <!-- Contenu des réservations de spots -->
+  <h2>Your reservations :</h2>
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="col-md-4 mb-4">
@@ -19,8 +21,9 @@
   </div>
 </div>
 
-<div class="user-presentation">
-  <h2>Les réservations reçues pour vos spots :</h2>
+<div class="user-presentation" id="received" style="display: none;">
+  <!-- Contenu des réservations reçues pour vos spots -->
+  <h2>Your received reservations :</h2>
   <div class="row">
     <% @bookings_received.each do |booking| %>
       <div class="col-md-4 mb-4">
@@ -50,11 +53,9 @@
   </div>
 </div>
 
-
-
-
-<div class="user-presentation">
-  <h2>Mes spots :</h2>
+<div class="user-presentation" id="spots" style="display: none;">
+  <!-- Contenu de vos spots -->
+  <h2>Your spots :</h2>
   <div class="row">
     <% @spots.each do |spot| %>
       <div class="col-md-4 mb-4">
@@ -63,6 +64,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= spot.name %></h5>
             <p class="card-text">
+              <strong>description:</strong> <%= spot.description %><br>
               <strong>Location:</strong> <%= spot.location %><br>
               <strong>Prix:</strong> <%= spot.price %>
             </p>
@@ -73,9 +75,35 @@
   </div>
 </div>
 
-
-<div class="user-footer">
-  </ul>
-
-  <p>Vous voulez voir d'autres spots ? Vous pouvez les consulter depuis la page <%= link_to 'Voir tous les spots', spots_path, class: 'button' %></p>
+<div class="user-footer text-center mt-4" id="buttons">
+    <p>
+      <button class="btn btn-primary btn-lg" onclick="showReservations()">View your reservations</button>
+      <button class="btn btn-primary btn-lg" onclick="showReceived()">View received reservations</button>
+      <button class="btn btn-primary btn-lg" onclick="showSpots()">View your spots</button>
+    </p>
+    <a href="<%= root_path %>" class="btn btn-secondary btn-lg">Retour</a>
+  </div>
 </div>
+
+<script>
+  function showReservations() {
+    document.getElementById("reservations").style.display = "block";
+    document.getElementById("received").style.display = "none";
+    document.getElementById("spots").style.display = "none";
+    // document.getElementById("buttons").style.display = "none";
+  }
+
+  function showReceived() {
+    document.getElementById("reservations").style.display = "none";
+    document.getElementById("received").style.display = "block";
+    document.getElementById("spots").style.display = "none";
+    // document.getElementById("buttons").style.display = "none";
+  }
+
+  function showSpots() {
+    document.getElementById("reservations").style.display = "none";
+    document.getElementById("received").style.display = "none";
+    document.getElementById("spots").style.display = "block";
+    // document.getElementById("buttons").style.display = "none";
+  }
+</script>

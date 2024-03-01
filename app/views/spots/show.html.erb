@@ -7,6 +7,7 @@
       <p><%= @spot.description %></p>
       <p><%= @spot.location %></p>
       <p><%= @spot.price%></p>
+
       <% if current_user == @spot.user%>
         <%= link_to "Modifier ce spot", edit_spot_path(@spot), class: "button-ajouter" %>
       <% else %>
