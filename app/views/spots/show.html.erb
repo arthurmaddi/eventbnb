@@ -7,8 +7,8 @@
       <%= cl_image_tag @spot.image.key, class:"show-image"%>
       <h2><%= @spot.name %></h2>
       <p><%= @spot.description %></p>
-      <p><%= @spot.location %></p>
-      <p><%= @spot.price%></p>
+      <p> <i class="fa-solid fa-city"></i> <%= @spot.location %></p>
+      <p> <i class="fa-solid fa-euro-sign"></i> <%= @spot.price%></p>
 
       <% if current_user == @spot.user%>
         <%= link_to "Modify the spot", edit_spot_path(@spot), class: "button-74" %>
@@ -23,16 +23,13 @@
             <%= f.submit class: "button-74"  %>
           <% end %>
         <% end %>
+
       </div>
       <% if current_user == @spot.user%>
-          <%=link_to "Delete the spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?", class: "button-74" } %>
+          <%=link_to "Delete the spot", spot_path(@spot), class: "button-74", data: { turbo_method: :delete, confirm: "Are you sure?", class: "button-74" } %>
         <% else %>
         <% end %>
+
     </div>
   </div>
-          <% if current_user == @spot.user%>
-              <%=link_to "Delete the spot", spot_path(@spot), data: { turbo_method: :delete, confirm: "Are you sure?", class: "button-74" } %>
-            <% else %>
-            <% end %>
-
 </div>
