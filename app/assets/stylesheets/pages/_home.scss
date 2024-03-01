@@ -38,6 +38,10 @@
 //   margin-right: 3px;
 // }
 
+.presentation-info {
+  position: relative; /* Change position to relative */
+}
+
 .container-fluid {
   background-color: black;
 }
@@ -47,11 +51,36 @@
 }
 
 .banner {
-  min-height: calc(100vh - 108px);
+  height: calc(100vh - 48px - 48px); /* Adjust 108px according to your navbar and footer height */
   background-size: cover;
   background-position: center;
   padding: 150px 0;
   text-align: center;
   color: white;
   text-shadow: 0 0 10px black;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.home-page-container{
+  margin: auto;
+  height: 90%;
+  width: 90%;
+}
+
+.presentation-info {
+  margin-top: -70px;
+  margin-bottom: 50px;
+}
+
+.presentation-cards-images {
+  margin: 32px;
+  display: flex;
+  padding: 32px;
+}
+
+.presentation-cards-images img {
+  width: 66.66%; /* Ensure each image takes up 1/3 of the container width */
+  border: 1px solid #8B4513; /* Wood color */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  margin: 0 8px; /* Optional: Adjust spacing between images */
 }
