@@ -13,12 +13,16 @@
 }
 
 .show-card-photo-information{
-  width: 400px;
+  width: 25%;
   padding: 8px;
+}
+.show-image{
+  height: 100%
 }
 
 .show-card img{
   height: 300px;
+  width: auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
@@ -75,6 +79,18 @@ h2{
   justify-content: center;
   align-items: center;
 }
+
+.images-slides{
+  margin: 8px;
+  width: 60%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
 
 
 /* God bless america */

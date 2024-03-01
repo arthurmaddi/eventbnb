@@ -2,7 +2,8 @@
 
 .card-group {
   margin: 8px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 16px;
   margin: 16px;
 }
@@ -23,6 +24,6 @@
   object-fit: cover;
 }
 
-.button-details{
+.button-details {
   margin: 8px;
 }
