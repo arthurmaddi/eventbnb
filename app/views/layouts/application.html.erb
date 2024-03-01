@@ -7,10 +7,9 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <script scr="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <%= javascript_importmap_tags %>
   </head>
@@ -20,13 +19,9 @@
   <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-
     <div class="fix-footer">
           <%= yield %>
-
     </div>
-
-
   </body>
   <%= render "shared/footer" %>
 
