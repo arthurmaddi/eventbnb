@@ -1,5 +1,6 @@
 <h1>My dashboard </h1>
 
+
 <div class="user-presentation" id="reservations" style="display: none;">
   <!-- Contenu des réservations de spots -->
   <h2>Your reservations :</h2>
@@ -77,11 +78,11 @@
 
 <div class="user-footer text-center mt-4" id="buttons">
     <p>
-      <button class="btn btn-primary btn-lg" onclick="showReservations()">View your reservations</button>
-      <button class="btn btn-primary btn-lg" onclick="showReceived()">View received reservations</button>
-      <button class="btn btn-primary btn-lg" onclick="showSpots()">View your spots</button>
+      <button class="button-74" onclick="showReservations()">View your reservations</button>
+      <button class="button-74" onclick="showReceived()">View received reservations</button>
+      <button class="button-74" onclick="showSpots()">View your spots</button>
     </p>
-    <a href="<%= root_path %>" class="btn btn-secondary btn-lg">Retour</a>
+    <a href="<%= root_path %>" class="btn btn-secondary btn-lg">Come Back</a>
   </div>
 </div>
 
@@ -107,4 +108,3 @@
     // document.getElementById("buttons").style.display = "none";
   }
 </script>
-
